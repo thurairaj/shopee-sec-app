@@ -10,14 +10,17 @@
 
 import Tags from "./Tags.jsx";
 import Price from "./Price.jsx";
+import "./Product.css";
 
 function Product({ product }) {
   return (
     <div className={"product-container"}>
-      <div className={"image-container"}></div>
+      <div className={"image-container"}>
+        <img src={product.img} alt="product" />
+      </div>
       <div className={"text-container"}>
         <div>
-          <span>{product.name}</span>
+          <h3 className={"title"}>{product.name}</h3>
         </div>
         <Tags tags={product.tags}></Tags>
         <Price price={product.price}></Price>
